@@ -78,19 +78,66 @@ function enterKey(e) {
 }
 
 function commander(cmd) {
+  if (cmd.startsWith("webvium -s")) {
+      let data = cmd.split(" ")[2];
+      addLine("<span class=\"inherit\">searching " + data + "...</a>");
+      newTab("https://mrepol742.github.io/search?q=" + data);
+  } else if (cmd.startsWith("webvium -s -d")) {
+      let data = cmd.split(" ")[3];
+      addLine("<span class=\"inherit\">searching " + data + "...</a>");
+      newTab("https://mrepol742.github.io/searchdev?q=" + data);
+  } else {
   switch (cmd.toLowerCase()) {
+    case "repo":
+      addLine("<span class=\"inherit\">opening repositories...</a>");
+      newTab("https://github.com/mrepol742?tab=repositories");
+      break;
+    case "user":
+      addLine("<span class=\"inherit\">viewing your user browser agent...</a>");
+      newTab("https://mrepol742.github.io/useragent/");
+      break;
+    case "ip":
+      addLine("<span class=\"inherit\">viewing your internet ip address...</a>");
+      newTab("https://mrepol742.github.io/viewip/");
+      break;
     case "help":
       loopLines(help, "color2 margin", 80);
       break;
     case "whois":
       loopLines(whois, "color2 margin", 80);
       break;
-    case "whoami":
-      loopLines(whoami, "color2 margin", 80);
+    case "webvium":
+      loopLines(webvium, "color2 margin", 80);
       break;
-    case "video":
-      addLine("Opening YouTube...", "color2", 80);
-      newTab(youtube);
+    case "trophy":
+      loopLines(['<img alt="Github Trophy" src="https://github-profile-trophy.vercel.app/?username=mrepol742&theme=gruvbox">'], "color2 margin", 80);
+      break;
+    case "stat":
+      loopLines(['<img alt="Github Stats" src="https://github-readme-stats.vercel.app/api?username=mrepol742&show_icons=true&count_private=true&theme=gruvbox&include_all_commits=true">'], "color2 margin", 80);
+      break;
+    case "stat -p":
+      loopLines(['<img alt="Github Stats with Private Contributions" src="https://mrepol742.github.io/github-stats/generated/overview.svg">'], "color2 margin", 80);
+      break;
+    case "lang":
+      loopLines(['<img alt="Most Used Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mrepol742&layout=compact&include_all_commits=true&&count_private=true&langs_count=20&theme=gruvbox">'], "color2 margin", 80);
+      break;
+    case "lang -f":
+      loopLines(['<img alt="Most Used Languages by File Size" src="https://mrepol742.github.io/github-stats/generated/languages.svg">'], "color2 margin", 80);
+      break;
+    case "streak":
+      loopLines(['<img alt="\'Streak Stats\' Please refresh the page if the stats didnt show up" src="https://mrepol742-streak-stats.herokuapp.com/?user=mrepol742&theme=gruvbox">'], "color2 margin", 80);
+      break;
+    case "cont":
+      loopLines(['<img alt="\'Contributions\' Please refresh the page if the graph didnt show up" src="https://mrepol742-activity-graph.herokuapp.com/graph?username=mrepol742&theme=github&hide_border=true">'], "color2 margin", 80);
+      break;
+    case "time":
+      loopLines(['<img alt="wakatime" src="https://wakatime.com/badge/user/8ad4afa2-1a56-40d1-a949-4663473915b6/project/a428bb67-a8c9-4373-9398-e7c1a16fbe2c.svg">'], "color2 margin", 80);
+      break;
+    case "gif":
+      loopLines(['<img alt="Detective Conan" src="https://mrepol742-gif-randomizer.vercel.app/api/" /> '], "color2 margin", 80);
+      break;
+    case "trophy":
+      loopLines(['<img alt="Detective Conan" src="https://mrepol742-gif-randomizer.vercel.app/api/" /> '], "color2 margin", 80);
       break;
     case "sudo":
       addLine("Oh no, you're not admin...", "color2", 80);
@@ -99,14 +146,16 @@ function commander(cmd) {
       }, 1000); 
       break;
     case "social":
-      loopLines(social, "color2 margin", 80);
+      addLine("<span class=\"inherit\">opening link tree...</a>");
+      newTab("https://mrepol742.github.io/link-tree/?utm_medium=social&utm_source=mrepol742.me");
       break;
     case "secret":
       liner.classList.add("password");
       pw = true;
       break;
     case "projects":
-      loopLines(projects, "color2 margin", 80);
+      addLine("<span class=\"inherit\">opening projects...</a>");
+      newTab("https://mrepol742.github.io#projects");
       break;
     case "password":
       addLine("<span class=\"inherit\"> Lol! You're joking, right? You\'re gonna have to try harder than that!😂</span>", "error", 100);
@@ -116,45 +165,36 @@ function commander(cmd) {
       loopLines(commands, "color2", 80);
       addLine("<br>", "command", 80 * commands.length + 50);
       break;
-    case "email":
-      addLine('Opening mailto:<a href="mailto:mrepol742@gmail.com">mrepol742@gmail.com</a>...', "color2", 80);
-      newTab(email);
-      break;
-    case "cls":
     case "clear":
       setTimeout(function() {
         terminal.innerHTML = '<a id="before"></a>';
         before = document.getElementById("before");
       }, 1);
       break;
+    
+    case "new":
+      newTab("https://mrepol742.me");
+      break;
+    case "new -w":
+      window.open("https://mrepol742.me", "", "width=1200, height=1200");
+      break;
+    case "exit":
+      var confirm_result = confirm("Are you sure you want to quit?");
+      if (confirm_result == true) {
+        window.close();
+      }
+      break;
+    case "restart":
+      location.reload();
+      break;
     case "banner":
       loopLines(banner, "", 80);
-      break;
-    // socials
-    case "youtube":
-      addLine("Opening YouTube...", "color2", 80);
-      newTab(youtube);
-      break;
-    case "twitter":
-      addLine("Opening Twitter...", "color2", 0);
-      newTab(twitter);
-      break;
-    case "linkedin":
-      addLine("Opening LinkedIn...", "color2", 0);
-      newTab(linkedin);
-      break;
-    case "instagram":
-      addLine("Opening Instagram...", "color2", 0);
-      newTab(instagram);
-      break;
-    case "github":
-      addLine("Opening GitHub...", "color2", 0);
-      newTab(github);
       break;
     default:
       addLine("<span class=\"inherit\">Command not found. For a list of commands, type <span class=\"command\">'help'</span>.</span>", "error", 100);
       break;
   }
+}
 }
 
 function newTab(link) {
