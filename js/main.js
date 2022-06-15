@@ -92,6 +92,14 @@ function commander(cmd) {
       addLine("<span class=\"inherit\">opening repositories...</a>");
       newTab("https://github.com/mrepol742?tab=repositories");
       break;
+    case "wakatime":
+      addLine("<span class=\"inherit\">opening wakatime...</a>");
+      newTab("https://wakatime.com/@mrepol742");
+      break;
+    case "stat 2021":
+      addLine("<span class=\"inherit\">opening programming stats 2021...</a>");
+      newTab("https://mrepol742.github.io/programming-stats/2021");
+      break;
     case "user":
       addLine("<span class=\"inherit\">viewing your user browser agent...</a>");
       newTab("https://mrepol742.github.io/useragent/");
@@ -132,6 +140,9 @@ function commander(cmd) {
       break;
     case "time":
       loopLines(['<img alt="wakatime" src="https://wakatime.com/badge/user/8ad4afa2-1a56-40d1-a949-4663473915b6/project/a428bb67-a8c9-4373-9398-e7c1a16fbe2c.svg">'], "color2 margin", 80);
+      break;
+    case "spotify":
+      loopLines(['<img alt="Spotify" src="https://spotify-recently-played-readme.vercel.app/api?user=7xx9e7hwq1qyown0m4ut78pcz&count=10&unique=true">'], "color2 margin", 80);
       break;
     case "gif":
       loopLines(['<img alt="Detective Conan" src="https://mrepol742-gif-randomizer.vercel.app/api/" /> '], "color2 margin", 80);
