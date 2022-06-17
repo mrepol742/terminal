@@ -86,6 +86,27 @@ function commander(cmd) {
       let data = cmd.split(" ")[3];
       addLine("<span class=\"inherit\">searching " + data + "...</a>");
       newTab("https://mrepol742.github.io/searchdev?q=" + data);
+  } else if (cmd.startsWith("trophy ")) {
+      let data = cmd.split(" ")[1];
+      addLine("<span class=\"inherit\">showing Github Trophy for github account user https://github.com/" + data + "...</a>");
+      loopLines(["<img alt=\"Github Trophy\" src=\"https://github-profile-trophy.vercel.app/?username=" + data + "&theme=gruvbox\">"], "color2 margin", 80);
+  } else if (cmd.startsWith("lang ")) {
+      let data = cmd.split(" ")[1];
+      addLine("<span class=\"inherit\">showing Language Stats for github account user https://github.com/" + data + "...</a>");
+      loopLines(["<img alt=\"Language Stats\" src=\"https://github-readme-stats.vercel.app/api/top-langs/?username=" + data + "&layout=compact&include_all_commits=true&&count_private=true&langs_count=20&theme=gruvbox\">"], "color2 margin", 80);
+  } else if (cmd.startsWith("streak ")) {
+      let data = cmd.split(" ")[1];
+      addLine("<span class=\"inherit\">showing Streak Stats for github account user https://github.com/" + data + "...</a>");
+      loopLines(["<img alt=\"Streak Stats\" src=\"https://mrepol742-streak-stats.herokuapp.com/?user=" + data + "&theme=gruvbox\">"], "color2 margin", 80);
+  } else if (cmd.startsWith("cont ")) {
+      let data = cmd.split(" ")[1];
+      addLine("<span class=\"inherit\">showing Contribution Graph for github account user https://github.com/" + data + "...</a>");
+      loopLines(["<img alt=\"Contribution Graph\" src=\"https://mrepol742-activity-graph.herokuapp.com/graph?username=" + data + "&theme=github&hide_border=true\">"], "color2 margin", 80);
+  } else if (cmd.startsWith("qrcode ")) {
+      let data = cmd.split(" ")[1];
+      addLine("<span class=\"inherit\">showing generated QRCode for " + data + "...</a>");
+      loopLines(["<img alt=\"QRCode\" src=\"https://api.qrserver.com/v1/create-qr-code/?size=360x360&data=" + data + "\">"], "color2 margin", 80);
+     
   } else {
   switch (cmd.toLowerCase()) {
     case "repo":
