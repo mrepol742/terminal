@@ -111,12 +111,17 @@ function commander(cmd) {
       let data = cmd.split(" ")[1];
       addLine("<span class=\"inherit\">showing generated QRCode for " + data + "...</a>");
       loopLines(["<img alt=\"QRCode\" src=\"https://api.qrserver.com/v1/create-qr-code/?size=360x360&data=" + data + "\">"], "color2 margin", 80);
-     
+  } else if (cmd.startsWith("contv2")) {
+      loopLines(['<img alt="\'Contributions 2\' Please refresh the page if the graph didnt show up" src="https://github.com/mrepol742/mrepol742/blob/master/profile-3d-contrib/profile-south-season-animate.svg">'], "color2 margin", 80);
   } else {
   switch (cmd.toLowerCase()) {
     case "repo":
       addLine("<span class=\"inherit\">opening repositories...</a>");
       newTab("https://github.com/mrepol742?tab=repositories");
+      break;
+    case "sourcecode":
+      addLine("<span class=\"inherit\">opening terminal repository...</a>");
+      newTab("https://github.com/mrepol742/terminal");
       break;
     case "wakatime":
       addLine("<span class=\"inherit\">opening wakatime...</a>");
