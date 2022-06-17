@@ -102,6 +102,11 @@ function commander(cmd) {
       let data = cmd.split(" ")[1];
       addLine("<span class=\"inherit\">showing Contribution Graph for github account user https://github.com/" + data + "...</a>");
       loopLines(["<img alt=\"Contribution Graph\" src=\"https://mrepol742-activity-graph.herokuapp.com/graph?username=" + data + "&theme=github&hide_border=true\">"], "color2 margin", 80);
+  } else if (cmd.startsWith("stat ")) {
+      let data = cmd.split(" ")[1];
+      addLine("<span class=\"inherit\">showing Github Stat for github account user https://github.com/" + data + "...</a>");
+      loopLines(["<img alt=\"Github Stat\" src=\"https://github-readme-stats.vercel.app/api?username=" + data + "&show_icons=true&count_private=true&theme=gruvbox&include_all_commits=true\">"], "color2 margin", 80);
+
   } else if (cmd.startsWith("qrcode ")) {
       let data = cmd.split(" ")[1];
       addLine("<span class=\"inherit\">showing generated QRCode for " + data + "...</a>");
