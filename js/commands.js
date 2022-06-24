@@ -60,6 +60,9 @@ help = [
   '<span class="command">new</span>           - Open new terminal',
   '<span class="command">new -w</span>        - Open new terminal in new Window',
   '<span class="command">restart</span>       - Restart terminal',
+  '<span class="command">credits</span>       - Terminal credits',
+  '<span class="command">copyright</span>     - Terminal copyright',
+  '<span class="command">license</span>       - Terminal license',
   "<br>",
 ];
 
@@ -73,6 +76,33 @@ banner = [
   "                     #                                       <br>",
   '<a href="https://wakatime.com/@mrepol742"><img src="https://wakatime.com/badge/user/8ad4afa2-1a56-40d1-a949-4663473915b6.svg" alt="Total time coded since Sep 3 2021" /></a> <a href="https://mrepol742.github.io/"><img alt="visitor" src="https://visitor-badge.glitch.me/badge?page_id=mrepol742.me"></a>',
   '<span class="color2">Welcome to my web-based interactive terminal.</span>',
-  '<span class="color2">Contribute to this project at <a href="https://mrepol742.github.io/#projects">https://mrepol742.github.io/#projects</a></span>',
-  "<span class=\"color2\">For a list of available commands, type</span> <span class=\"command\">'help'</span><span class=\"color2\">.</span>",
+  '<span class="color2">Contribute to this project at <a class="command" href="https://mrepol742.github.io/#projects">https://mrepol742.github.io/#projects</a></span>.',
+  "<span class=\"color2\">Type <span class=\"command\">\"help\"</span>, <span class=\"command\">\"copyright\"</span>, <span class=\"command\">\"credits\"</span> or <span class=\"command\">\"license\"</span> for more information.",
+  '<br>'
+];
+
+credits = [
+  '<br>',
+  'Copyright (c) 2022 Melvin Jones Repol (<a href="https://mrepol742.github.io">mrepol742.github.io</a>). All Rights Reserved.',
+  'This terminal source code derived from Techh Jork.',
+  '<a href="https://github.com/techhjork">https://github.com/techhjork</a>',
+  '<br>'
+];
+
+copyright = [
+  '<br>',
+  'Copyright (c) 2022 Melvin Jones Repol (<a href="https://mrepol742.github.io">mrepol742.github.io</a>). All Rights Reserved.',
+  '<br>',
+  ' License under the Mrepol742 License, version 1.0 (the "License");',
+  ' you may not use this file except in compliance with the License.',
+  ' You may obtain a copy of the License at',
+  '<br>',
+  '     <a href="https://github.com/mrepol742/terminal/blob/master/LICENSE">https://github.com/mrepol742/terminal/blob/master/LICENSE</a>',
+  '<br>',
+  ' Unless required by the applicable law or agreed in writing, software',
+  ' distributed under the License is distributed on an "AS IS" BASIS',
+  ' WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.',
+  ' See the License for the specific language governing permissions and',
+  ' limitations under the License.',
+  '<br>'
 ];

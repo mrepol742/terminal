@@ -232,8 +232,20 @@ function commander(cmd) {
     case "banner":
       loopLines(banner, "", 80);
       break;
+    case "credits":
+      loopLines(credits, "command", 80);
+    break;
+    case "license":
+      addLine("<span class=\"inherit\">opening license...</a>");
+      newTab("https://raw.githubusercontent.com/mrepol742/terminal/master/LICENSE");
+    break;
+    case "copyright":
+      loopLines(copyright, "command", 80);
+    break;
     default:
-      addLine("<span class=\"inherit\">Command not found. For a list of commands, type <span class=\"command\">'help'</span>.</span>", "error", 100);
+      addLine("<span class=\"inherit\">Traceback (most recent call last):<br>" +
+      "    File \"&lt;stdin>\", line 1, in <module><br>" +
+    "NameError: name '" + cmd + "' is not defined", "error", 100);
       break;
   }
 }
