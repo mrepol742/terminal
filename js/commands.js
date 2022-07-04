@@ -36,6 +36,7 @@ help = [
   '<span class="command">trophy &lt;username></span><br>              - Show github trophy of a given github account',
   '<span class="command">stat</span>          - Show github stats',
   '<span class="command">stat &lt;username></span><br>              - Show github stats of a given github account',
+  '<span class="command">stat -a &lt;username></span><br>           - Show github stats of a given github account',
   '<span class="command">stat -p</span>       - Show github stats with private contributions',
   '<span class="command">stat 2021</span>     - Programming stat for 2021',
   '<span class="command">lang</span>          - Most used languages',
