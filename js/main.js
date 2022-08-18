@@ -82,10 +82,6 @@ function commander(cmd) {
       let data = cmd.split(" ")[2];
       addLine("<span class=\"inherit\">searching " + data + "...</a>");
       newTab("https://mrepol742.github.io/search?q=" + data);
-  } else if (cmd.startsWith("webvium -s -d")) {
-      let data = cmd.split(" ")[3];
-      addLine("<span class=\"inherit\">searching " + data + "...</a>");
-      newTab("https://mrepol742.github.io/searchdev?q=" + data);
   } else if (cmd.startsWith("trophy ")) {
       let data = cmd.split(" ")[1];
       addLine("<span class=\"inherit\">showing Github Trophy for github account user https://github.com/" + data + "...</a>");

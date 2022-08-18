@@ -15,7 +15,7 @@ webvium = [
   "<br>",
   "<b>The Project Webvium</b>",
   "<br>Webvium<br>A Project that aims to be the lightest, fastest, secured, private <br>and full-featured android web browser. Programmed and design from Scratch.<br>stable: <a href=\"https://mrepol742.github.io/webvium/?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io/webvium/</a><br>dev: <a href=\"https://mrepol742.github.io/webviumdev/?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io/webviumdev/</a>",
-  "<br>Webvium Search<br>A Search Engine from Webvium Project that's currently under development progress. <br>The default homepage for the Webvium Browser with style.<br>stable: <a href=\"https://mrepol742.github.io/search?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io/search/</a><br>dev: <a href=\"https://mrepol742.github.io/search?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io/searchdev/</a>",
+  "<br>Webvium Search<br>A Search Engine from Webvium Project that's currently under development progress. <br>The default homepage for the Webvium Browser with style.<br>live: <a href=\"https://mrepol742.github.io/search?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io/search/</a>",
   "<br>Webvium VPN<br>Inspired from Webvium, Webvium VPN is a lightweight android VPN <br> app focuses in speed, simplicity, security and privacy.<br><a href=\"https://mrepol742.github.io/webviumvpn/?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io/webviumvpn/</a>",
   "<br>"
 ];
