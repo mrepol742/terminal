@@ -68,15 +68,13 @@ help = [
 ];
 
 banner = [
-  '<span class="index">©2022 Melvin Jones Repol | Software Engineer</span>',
+  'Welcome to my interactive web terminal portfolio.',
   "                                  \"\"#    mmmmmm    mm   mmmm <br>" +
   "mmmmm   m mm   mmm   mmmm    mmm     #        #\"   m\"#  \"   \"#<br>" +
   "# # #   #\"  \" #\"  #  #\" \"#  #\" \"#    #       m\"   #\" #      m\"<br>" +
   "# # #   #     #\"\"\"\"  #   #  #   #    #      m\"   #mmm#m   m\"  <br>" +
   "# # #   #     \"#mm\"  ##m#\"  \"#m#\"    \"mm   m\"        #  m#mmmm<br>" +
   "                     #                                       <br>",
-  '<a href="https://wakatime.com/@mrepol742"><img src="https://wakatime.com/badge/user/8ad4afa2-1a56-40d1-a949-4663473915b6.svg" alt="Total time coded since Sep 3 2021" /></a> <a href="https://mrepol742.github.io/"><img alt="visitor" src="https://visitor-badge.glitch.me/badge?page_id=mrepol742.me"></a>',
-  '<span class="color2">Welcome to my web-based interactive terminal.</span>',
   '<span class="color2">Contribute to this project at <a class="command" href="https://mrepol742.github.io/#projects">https://mrepol742.github.io/#projects</a></span>.',
   "<span class=\"color2\">Type <span class=\"command\">\"help\"</span>, <span class=\"command\">\"copyright\"</span>, <span class=\"command\">\"credits\"</span> or <span class=\"command\">\"license\"</span> for more information.",
   '<br>'
