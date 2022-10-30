@@ -75,7 +75,7 @@ banner = [
   "# # #   #     #\"\"\"\"  #   #  #   #    #      m\"   #mmm#m   m\"  <br>" +
   "# # #   #     \"#mm\"  ##m#\"  \"#m#\"    \"mm   m\"        #  m#mmmm<br>" +
   "                     #                                       <br>",
-  '<span class="color2">Contribute to this project at <a class="command" href="https://mrepol742.github.io/#projects">https://mrepol742.github.io/#projects</a></span>.',
+  '<span class="color2">Contribute to this project at <a class="command" href="https://github.com/mrepol742/terminal/">https://github.com/mrepol742/terminal/</a></span>.',
   "<span class=\"color2\">Type <span class=\"command\">\"help\"</span>, <span class=\"command\">\"copyright\"</span>, <span class=\"command\">\"credits\"</span> or <span class=\"command\">\"license\"</span> for more information.",
   '<br>'
 ];

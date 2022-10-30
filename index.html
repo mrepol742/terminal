@@ -10,7 +10,7 @@
                       "                                          -->
 <html>
   <head>
-   <title>Terminal - Melvin Jones Repol</title>
+   <title>Interactive Terminal Portfolio - Melvin Jones Repol</title>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css" />
    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,23 +20,23 @@
     <meta charset="utf-8">
     <meta property="og:image:alt" content="Picture of Terminal">
     <meta property="twitter:image:src" content="/terminal.png" />
-    <meta property="twitter:title" content="Terminal - Melvin Jones Repol" />
+    <meta property="twitter:title" content="Interactive Terminal Portfolio - Melvin Jones Repol" />
     <meta property="twitter:description"
-      content="Contribute to this project at https://mrepol742.github.io#projects and for a list of available commands type `help`, `credits`, `copyright` or `license`." />
-    <meta property="og:title" content="Terminal - Melvin Jones Repol">
+      content="Contribute to this project at https://github.com/mrepol742/terminal/ and for a list of available commands type `help`, `credits`, `copyright` or `license`." />
+    <meta property="og:title" content="Interactive Terminal Portfolio - Melvin Jones Repol">
     <meta property="og:url" content="https://mrepol742.me/">
   
-    <meta property="og:site_name" content="Terminal - Melvin Jones Repol">
+    <meta property="og:site_name" content="Interactive Terminal Portfolio - Melvin Jones Repol">
 
     <meta property="og:description"
-      content="Contribute to this project at https://mrepol742.github.io#projects and for a list of available commands type `help`, `credits`, `copyright` or `license`.">
+      content="Contribute to this project at https://github.com/mrepol742/terminal/ and for a list of available commands type `help`, `credits`, `copyright` or `license`.">
     <meta property="og:image" content="/terminal.png">
     <meta name="theme-color" content="#ffffff">
       <meta name="keywords"
       content="melvin jones repol, melvin jones gallano repol, mrepol742, terminal, web terminal">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-      content="Contribute to this project at https://mrepol742.github.io#projects and for a list of available commands type `help`, `credits`, `copyright` or `license`.">
+      content="Contribute to this project at https://github.com/mrepol742/terminal/ and for a list of available commands type `help`, `credits`, `copyright` or `license`.">
     <meta name="author" content="Melvin Jones Repol">
      
     
@@ -59,21 +59,14 @@
       <a id="before"></a>
     </div>
     <div id="command" onclick="$('texter').focus();">
-      <textarea
-        type="text"
-        id="texter"
-        onkeyup="typeIt(this, event)"
-        onkeydown="typeIt(this, event); 
-                   moveIt(this.value.length, event)"
-        onkeypress="typeIt(this, event);"
-        autofocus
-      ></textarea>
+      <textarea type="text" id="texter" onkeyup="typeIt(this, event)" onkeydown="typeIt(this, event);  moveIt(this.value.length, event)"
+        onkeypress="typeIt(this, event);" autofocus></textarea>
       <div id="liner">
         <span id="typer"></span><b class="cursor" id="cursor">█</b>
       </div>
     </div>
-    <script src="/js/caret.js" ></script>
-    <script src="/js/commands.js" ></script>
-    <script src="/js/main.js" async></script>
+    <script src="/js/caret.js"></script>
+    <script src="/js/commands.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>

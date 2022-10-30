@@ -5,7 +5,7 @@ body {
   width: 100%;
   min-width: 550px;
   color: #4285f4;
-  background: #211D1B;
+  background: #000000;
   font-family: cursor, monospace;
   overflow-x: hidden;
 }
@@ -24,6 +24,7 @@ textarea {
   left: -1000px;
   position: absolute;
 }
+
 b {
   font-weight: bold;
   text-decoration: underline;
@@ -68,7 +69,7 @@ b {
 
 #liner::before {
   color: #4285f4;
-  content: "mrepol742.github.io:~$";
+  content: "mrepol742:~$";
 }
 
 #liner.password::before {
@@ -117,7 +118,7 @@ p {
 }
 
 .color2 {
-  color: #B89076;
+  color: #7677b8;
 }
 
 .command {
@@ -126,7 +127,7 @@ p {
 }
 
 .error {
-  color: #B89076;
+  color: #df3838;
 }
 
 .white {

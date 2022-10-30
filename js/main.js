@@ -9,6 +9,14 @@ var pw = false;
 let pwd = false;
 var commands = [];
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then((reg) => {
+    console.log('[ServiceWorker] Registered');
+  }).catch((err) => {
+    console.error('[ServiceWorker] failed: ', err)
+  });
+}
+
 setTimeout(function() {
   loopLines(banner, "", 80);
   textarea.focus();
@@ -55,7 +63,7 @@ function enterKey(e) {
     if (e.keyCode == 13) {
       commands.push(command.innerHTML);
       git = commands.length;
-      addLine("mrepol742.github.io:~$ " + command.innerHTML, "no-animation", 0);
+      addLine("mrepol742:~$ " + command.innerHTML, "no-animation", 0);
       commander(command.innerHTML.toLowerCase());
       command.innerHTML = "";
       textarea.value = "";
