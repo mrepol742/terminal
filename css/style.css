@@ -1,12 +1,21 @@
+@font-face {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/MavenPro.woff2") format('woff2');
+}
+
 body {
   margin: 0;
   padding: 15px 20px;
   min-height: 99%;
+  font-size: 1.5em;
   width: 100%;
   min-width: 550px;
   color: #4285f4;
   background: #000000;
-  font-family: cursor, monospace;
+  font-family: 'Maven Pro', sans-serif;
   overflow-x: hidden;
 }
 
@@ -80,6 +89,7 @@ b {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -108,6 +118,7 @@ p {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
@@ -123,7 +134,7 @@ p {
 
 .command {
   color: #73ABAD;
-  text-shadow: 0 0 5px #73ABAD; 
+  text-shadow: 0 0 5px #73ABAD;
 }
 
 .error {
@@ -134,7 +145,8 @@ p {
   color: #fff;
 }
 
-.inherit, a {
+.inherit,
+a {
   color: #9C8394;
 }
 

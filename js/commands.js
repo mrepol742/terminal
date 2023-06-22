@@ -69,12 +69,7 @@ help = [
 
 banner = [
   'Welcome to my interactive web terminal portfolio.',
-  "                                  \"\"#    mmmmmm    mm   mmmm <br>" +
-  "mmmmm   m mm   mmm   mmmm    mmm     #        #\"   m\"#  \"   \"#<br>" +
-  "# # #   #\"  \" #\"  #  #\" \"#  #\" \"#    #       m\"   #\" #      m\"<br>" +
-  "# # #   #     #\"\"\"\"  #   #  #   #    #      m\"   #mmm#m   m\"  <br>" +
-  "# # #   #     \"#mm\"  ##m#\"  \"#m#\"    \"mm   m\"        #  m#mmmm<br>" +
-  "                     #                                       <br>",
+  '<br>',
   '<span class="color2">Contribute to this project at <a class="command" href="https://github.com/mrepol742/terminal/">https://github.com/mrepol742/terminal/</a></span>.',
   "<span class=\"color2\">Type <span class=\"command\">\"help\"</span>, <span class=\"command\">\"copyright\"</span>, <span class=\"command\">\"credits\"</span> or <span class=\"command\">\"license\"</span> for more information.",
   '<br>'
