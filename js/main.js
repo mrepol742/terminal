@@ -1,3 +1,5 @@
+header.style = "display: none;";
+
 var before = document.getElementById("before");
 var liner = document.getElementById("liner");
 var command = document.getElementById("typer"); 
@@ -27,7 +29,7 @@ webvium = [
   "<br>",
   "<b>The Project Webvium</b>",
   "<br>Webvium<br>A Project that aims to be the lightest, fastest, secured, private <br>and full-featured android web browser. Programmed and design from Scratch.<br>stable: <a href=\"https://mrepol742.github.io/webvium/?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io/webvium/</a><br>dev: <a href=\"https://mrepol742.github.io/webviumdev/?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io/webviumdev/</a>",
-  "<br>Webvium Search<br>A Search Engine from Webvium Project that's currently under development progress. <br>The default homepage for the Webvium Browser with style.<br>live: <a href=\"https://mrepol742.github.io/search?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io/search/</a>",
+  "<br>Webvium Search<br>Find information quickly and easily, and browse the Internet securely with Webvium Search.<br>live: <a href=\"https://mrepol742.github.io/search?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io/search/</a>",
   "<br>Webvium VPN<br>Inspired from Webvium, Webvium VPN is a lightweight android VPN <br> app focuses in speed, simplicity, security and privacy.<br><a href=\"https://mrepol742.github.io/webviumvpn/?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io/webviumvpn/</a>",
   "<br>"
 ];
@@ -73,44 +75,14 @@ help = [
   '<span class="command">new</span>           - Open new terminal',
   '<span class="command">new -w</span>        - Open new terminal in new Window',
   '<span class="command">restart</span>       - Restart terminal',
-  '<span class="command">credits</span>       - Terminal credits',
-  '<span class="command">copyright</span>     - Terminal copyright',
   '<span class="command">license</span>       - Terminal license',
   "<br>",
 ];
 
 banner = [
-  'Welcome to my interactive web terminal portfolio.',
-  '<br>',
-  '<span class="color2">Contribute to this project at <a class="command" href="https://github.com/mrepol742/terminal/">https://github.com/mrepol742/terminal/</a></span>.',
-  "<span class=\"color2\">Type <span class=\"command\">\"help\"</span>, <span class=\"command\">\"copyright\"</span>, <span class=\"command\">\"credits\"</span> or <span class=\"command\">\"license\"</span> for more information.",
-  '<br>'
-];
-
-credits = [
-  '<br>',
-  'Copyright (c) 2022 Melvin Jones Repol (<a href="https://mrepol742.github.io">mrepol742.github.io</a>). All Rights Reserved.',
-  'This terminal source code derived from Techh Jork.',
-  '<a href="https://github.com/techhjork">https://github.com/techhjork</a>',
-  '<br>'
-];
-
-copyright = [
-  '<br>',
-  'Copyright (c) 2022 Melvin Jones Repol (<a href="https://mrepol742.github.io">mrepol742.github.io</a>). All Rights Reserved.',
-  '<br>',
-  ' License under the Mrepol742 License, version 1.0 (the "License");',
-  ' you may not use this file except in compliance with the License.',
-  ' You may obtain a copy of the License at',
-  '<br>',
-  '     <a href="https://github.com/mrepol742/terminal/blob/master/LICENSE">https://github.com/mrepol742/terminal/blob/master/LICENSE</a>',
-  '<br>',
-  ' Unless required by the applicable law or agreed in writing, software',
-  ' distributed under the License is distributed on an "AS IS" BASIS',
-  ' WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.',
-  ' See the License for the specific language governing permissions and',
-  ' limitations under the License.',
-  '<br>'
+  '<h1>Melvin Jones \'Mj\' Repol</h1>',
+  '<p class="color2">Software Engineer | Full Stack Web Developer | SEO | PWA | Arduino</p>',
+  "<p class=\"color2\">use <span class=\"command\">\"help\"</span> for command list.</p>",
 ];
 
 function $(elid) {
@@ -394,15 +366,9 @@ function commander(cmd) {
     case "banner":
       loopLines(banner, "", 80);
       break;
-    case "credits":
-      loopLines(credits, "command", 80);
-    break;
     case "license":
       addLine("<span class=\"inherit\">opening license...</a>");
       newTab("https://raw.githubusercontent.com/mrepol742/terminal/master/LICENSE");
-    break;
-    case "copyright":
-      loopLines(copyright, "command", 80);
     break;
     default:
       addLine("<span class=\"inherit\">Traceback (most recent call last):<br>" +
