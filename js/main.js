@@ -7,15 +7,168 @@ var terminal = document.getElementById("terminal");
 var git = 0;
 var pw = false;
 let pwd = false;
+var password = "2ur2nr2irn2inr312355d";
 var commands = [];
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').then((reg) => {
-    console.log('[ServiceWorker] Registered');
-  }).catch((err) => {
-    console.error('[ServiceWorker] failed: ', err)
-  });
+whois = [
+  "<br>",
+  "Moshi mos, Melvin Jones Repol desu!",
+  "I'm a Software Engineer with experience in Web Development, SEO, Data Analyst and Computer Troubleshooting. <br>The creator of Webvium. A Self Taught Programer.<br><a href=\"https://mrepol742.github.io/?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io</a>",
+  "<br>"
+];
+
+secret = [
+  "<br>",
+  '<span class="command">sudo</span>           Only use if you\'re admin',
+  "<br>"
+];
+
+webvium = [
+  "<br>",
+  "<b>The Project Webvium</b>",
+  "<br>Webvium<br>A Project that aims to be the lightest, fastest, secured, private <br>and full-featured android web browser. Programmed and design from Scratch.<br>stable: <a href=\"https://mrepol742.github.io/webvium/?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io/webvium/</a><br>dev: <a href=\"https://mrepol742.github.io/webviumdev/?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io/webviumdev/</a>",
+  "<br>Webvium Search<br>A Search Engine from Webvium Project that's currently under development progress. <br>The default homepage for the Webvium Browser with style.<br>live: <a href=\"https://mrepol742.github.io/search?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io/search/</a>",
+  "<br>Webvium VPN<br>Inspired from Webvium, Webvium VPN is a lightweight android VPN <br> app focuses in speed, simplicity, security and privacy.<br><a href=\"https://mrepol742.github.io/webviumvpn/?ref=mrepol742.me\" target=\"blank\">https://mrepol742.github.io/webviumvpn/</a>",
+  "<br>"
+];
+
+help = [
+  "<br>",
+  '<span class="command">whois</span>         - Who am i?',
+  '<span class="command">social</span>        - Link tree',
+  '<span class="command">secret</span>        - Find the Password',
+  '<span class="command">projects</span>      - View projects',
+  '<span class="command">repo</span>          - View repositories',
+  '<span class="command">webvium</span>       - The project webvium',
+  '<span class="command">webvium -s &lt;query></span><br>              - Webvium Search',
+  '<span class="command">webvium -s -d &lt;query></span><br>              - Webvium Search Dev',
+  '<span class="command">history</span>       - View command history',
+  '<span class="command">gif</span>           - Show random gif',
+  '<span class="command">trophy</span>        - Show github trophy',
+  '<span class="command">trophy &lt;username></span><br>              - Show github trophy of a given github account',
+  '<span class="command">stat</span>          - Show github stats',
+  '<span class="command">stat &lt;username></span><br>              - Show github stats of a given github account',
+  '<span class="command">stat -a &lt;username></span><br>           - Show github stats of a given github account',
+  '<span class="command">stat -p</span>       - Show github stats with private contributions',
+  '<span class="command">stat 2021</span>     - Programming stat for 2021',
+  '<span class="command">lang</span>          - Most used languages',
+  '<span class="command">lang &lt;username></span><br>              - Most used languages of a given github account',
+  '<span class="command">lang -f</span>       - Most used languages by file size',
+  '<span class="command">wakatime</span>      - Programming Stats',
+  '<span class="command">streak</span>        - Streak Stats',
+  '<span class="command">streak &lt;username></span><br>              - Streak Stats of a given github account',
+  '<span class="command">spotify</span>       - Recent played songs',
+  '<span class="command">cont</span>          - Contributions Graph',
+  '<span class="command">contv2</span>       - Contributions Graph 2',
+  '<span class="command">cont &lt;username></span><br>              - Contributions Graph of a given github account',
+  '<span class="command">time</span>          - Total time i coded on this terminal',
+  '<span class="command">qrcode &lt;query></span><br>              - Generate QR Code',
+  '<span class="command">user</span>          - Show user agent',
+  '<span class="command">sourcecode</span>    - View terminal source codes',
+  '<span class="command">ip</span>            - Show IP Address',
+  '<span class="command">help</span>          - Show help for a command',
+  '<span class="command">clear</span>         - Clear terminal',
+  '<span class="command">banner</span>        - Display the header',
+  '<span class="command">exit</span>          - Close the terminal',
+  '<span class="command">new</span>           - Open new terminal',
+  '<span class="command">new -w</span>        - Open new terminal in new Window',
+  '<span class="command">restart</span>       - Restart terminal',
+  '<span class="command">credits</span>       - Terminal credits',
+  '<span class="command">copyright</span>     - Terminal copyright',
+  '<span class="command">license</span>       - Terminal license',
+  "<br>",
+];
+
+banner = [
+  'Welcome to my interactive web terminal portfolio.',
+  '<br>',
+  '<span class="color2">Contribute to this project at <a class="command" href="https://github.com/mrepol742/terminal/">https://github.com/mrepol742/terminal/</a></span>.',
+  "<span class=\"color2\">Type <span class=\"command\">\"help\"</span>, <span class=\"command\">\"copyright\"</span>, <span class=\"command\">\"credits\"</span> or <span class=\"command\">\"license\"</span> for more information.",
+  '<br>'
+];
+
+credits = [
+  '<br>',
+  'Copyright (c) 2022 Melvin Jones Repol (<a href="https://mrepol742.github.io">mrepol742.github.io</a>). All Rights Reserved.',
+  'This terminal source code derived from Techh Jork.',
+  '<a href="https://github.com/techhjork">https://github.com/techhjork</a>',
+  '<br>'
+];
+
+copyright = [
+  '<br>',
+  'Copyright (c) 2022 Melvin Jones Repol (<a href="https://mrepol742.github.io">mrepol742.github.io</a>). All Rights Reserved.',
+  '<br>',
+  ' License under the Mrepol742 License, version 1.0 (the "License");',
+  ' you may not use this file except in compliance with the License.',
+  ' You may obtain a copy of the License at',
+  '<br>',
+  '     <a href="https://github.com/mrepol742/terminal/blob/master/LICENSE">https://github.com/mrepol742/terminal/blob/master/LICENSE</a>',
+  '<br>',
+  ' Unless required by the applicable law or agreed in writing, software',
+  ' distributed under the License is distributed on an "AS IS" BASIS',
+  ' WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.',
+  ' See the License for the specific language governing permissions and',
+  ' limitations under the License.',
+  '<br>'
+];
+
+function $(elid) {
+  return document.getElementById(elid);
 }
+
+var cursor;
+window.onload = init;
+
+function init() {
+cursor = $("cursor");
+cursor.style.left = "0px";
+}
+
+function nl2br(txt) {
+return txt.replace(/\n/g, '');
+}
+
+function typeIt(from, e) {
+e = e || window.event;
+var w = $("typer");
+var tw = from.value;
+if (!pw){
+  w.innerHTML = nl2br(tw);
+}
+}
+
+function moveIt(count, e) {
+e = e || window.event;
+var keycode = e.keyCode || e.which;
+if (keycode == 37 && parseInt(cursor.style.left) >= (0 - ((count - 1) * 10))) {
+  cursor.style.left = parseInt(cursor.style.left) - 10 + "px";
+} else if (keycode == 39 && (parseInt(cursor.style.left) + 10) <= 0) {
+  cursor.style.left = parseInt(cursor.style.left) + 10 + "px";
+}
+}
+
+function alert(txt) {
+console.log(txt);
+}
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+      .register("/sw.js")
+      .then((reg) => {
+          if (reg.installing) {
+              console.log("Service worker installing");
+          } else if (reg.waiting) {
+              console.log("Service worker installed");
+          } else if (reg.active) {
+              console.log("Service worker active");
+          }
+      })
+      .catch((err) => {
+          console.error("Service worker failed: ", err);
+      });
+}
+
 
 setTimeout(function() {
   loopLines(banner, "", 80);
@@ -63,7 +216,7 @@ function enterKey(e) {
     if (e.keyCode == 13) {
       commands.push(command.innerHTML);
       git = commands.length;
-      addLine("mrepol742:~$ " + command.innerHTML, "no-animation", 0);
+      addLine("[arch@mrepol742 ~/ ] >> " + command.innerHTML, "no-animation", 0);
       commander(command.innerHTML.toLowerCase());
       command.innerHTML = "";
       textarea.value = "";
@@ -101,7 +254,7 @@ function commander(cmd) {
   } else if (cmd.startsWith("streak ")) {
       let data = cmd.split(" ")[1];
       addLine("<span class=\"inherit\">showing Streak Stats for github account user https://github.com/" + data + "...</a>");
-      loopLines(["<img alt=\"Streak Stats\" src=\"https://mrepol742-streak-stats.herokuapp.com/?user=" + data + "&theme=gruvbox\">"], "color2 margin", 80);
+      loopLines(["<img alt=\"Streak Stats\" src=\"https://streak-stats.demolab.com/?user=" + data + "&theme=gruvbox\">"], "color2 margin", 80);
   } else if (cmd.startsWith("cont ")) {
       let data = cmd.split(" ")[1];
       addLine("<span class=\"inherit\">showing Contribution Graph for github account user https://github.com/" + data + "...</a>");
@@ -173,7 +326,7 @@ function commander(cmd) {
       loopLines(['<img alt="Most Used Languages by File Size" src="https://mrepol742.github.io/github-stats/generated/languages.svg">'], "color2 margin", 80);
       break;
     case "streak":
-      loopLines(['<img alt="\'Streak Stats\' Please refresh the page if the stats didnt show up" src="https://mrepol742-streak-stats.herokuapp.com/?user=mrepol742&theme=gruvbox">'], "color2 margin", 80);
+      loopLines(['<img alt="\'Streak Stats\' Please refresh the page if the stats didnt show up" src="https://streak-stats.demolab.com/?user=mrepol742">'], "color2 margin", 80);
       break;
     case "cont":
       loopLines(['<img alt="\'Contributions\' Please refresh the page if the graph didnt show up" src="https://mrepol742-activity-graph.herokuapp.com/graph?username=mrepol742&theme=github&hide_border=true">'], "color2 margin", 80);
@@ -224,10 +377,10 @@ function commander(cmd) {
       break;
     
     case "new":
-      newTab("https://mrepol742.me");
+      newTab("https://mrepol742-terminal.netlify.app");
       break;
     case "new -w":
-      window.open("https://mrepol742.me", "", "width=1200, height=1200");
+      window.open("https://mrepol742-terminal.netlify.app", "", "width=1200, height=1200");
       break;
     case "exit":
       var confirm_result = confirm("Are you sure you want to quit?");
@@ -292,3 +445,6 @@ function loopLines(name, style, time) {
     addLine(item, style, index * time);
   });
 }
+
+document.body.style.background = "url('https://mrepol742.github.io/images/cover.jpg') no-repeat fixed center";
+	document.body.style.backgroundSize = "cover";
