@@ -1,70 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--
-                                                                       
-                                    ""#    mmmmmm    mm   mmmm 
+
+                                    ""#    mmmmmm    mm   mmmm
  mmmmm   m mm   mmm   mmmm    mmm     #        #"   m"#  "   "#
  # # #   #"  " #"  #  #" "#  #" "#    #       m"   #" #      m"
- # # #   #     #""""  #   #  #   #    #      m"   #mmm#m   m"  
+ # # #   #     #""""  #   #  #   #    #      m"   #mmm#m   m"
  # # #   #     "#mm"  ##m#"  "#m#"    "mm   m"        #  m#mmmm
-                      #                                        
+                      #
                       "                                          -->
 <html>
-  <head>
-   <title>Melvin Jones Repol - Terminal Theme Portfolio</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css" />
-   
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta property="og:type" content="website" />
-    
-    <meta charset="utf-8">
-    <meta property="og:image:alt" content="Picture of Terminal">
-    <meta property="twitter:image:src" content="/terminal.png" />
-    <meta property="twitter:title" content="Melvin Jones Repol - Terminal Theme Portfolio" />
-    <meta property="twitter:description"
-      content="Software Engineer | Full Stack Web Developer | SEO | PWA | Arduino" />
-    <meta property="og:title" content="Melvin Jones Repol - Terminal Theme Portfolio">
-    <meta property="og:url" content="https://mrepol742-terminal.netlify.app/">
-  
-    <meta property="og:site_name" content="Melvin Jones Repol - Terminal Theme Portfolio">
+    <head>
+        <title>Melvin Jones Repol - Terminal Theme Portfolio</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="/css/style.css"
+        />
 
-    <meta property="og:description"
-      content="Software Engineer | Full Stack Web Developer | SEO | PWA | Arduino">
-    <meta property="og:image" content="/terminal.png">
-    <meta name="theme-color" content="#ffffff">
-      <meta name="keywords"
-      content="melvin jones repol, melvin jones gallano repol, mrepol742, terminal, web terminal">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-      content="Software Engineer | Full Stack Web Developer | SEO | PWA | Arduino">
-    <meta name="author" content="Melvin Jones Repol">
-     
-    
-    <meta name="twitter:creator" content="@mrepol742" />
-  <meta name="twitter:site" content="@mrepol742" />
-  <meta name="robots" content="noodp, noydir" /> 
-    <meta name="twitter:domain" content="mrepol742-terminal.netlify.app" />
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="shortcut icon" href="/favicon.png">
-    <meta property="og:type" content="website">
-    <meta name="hostname" content="mrepol742-terminal.netlify.app">
-  </head>
-  <body>
-    <header id="header">
-      <h1>Melvin Jones 'Mj' Repol</h1>
-  <p class="color2">Software Engineer | Full Stack Web Developer | SEO | PWA | Arduino</p>
-<p class="color2">use <span class="command">"help"</span> for command list.</p>
-    </header>
-    <div id="terminal">
-      <a id="before"></a>
-    </div>
-    <div id="command" onclick="$('texter').focus();">
-      <textarea type="text" id="texter" onkeyup="typeIt(this, event)" onkeydown="typeIt(this, event);  moveIt(this.value.length, event)"
-        onkeypress="typeIt(this, event);" autofocus></textarea>
-      <div id="liner">
-        <span id="typer"></span><b class="cursor" id="cursor">█</b>
-      </div>
-    </div>
-    <script src="/js/main.js"></script>
-  </body>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <meta property="og:type" content="website" />
+
+        <meta charset="utf-8" />
+        <meta property="og:image:alt" content="Picture of Terminal" />
+        <meta property="twitter:image:src" content="/terminal.png" />
+        <meta
+            property="twitter:title"
+            content="Melvin Jones Repol - Terminal Theme Portfolio"
+        />
+        <meta
+            property="twitter:description"
+            content="Software Engineer | Full Stack Web Developer | SEO | PWA | Arduino"
+        />
+        <meta
+            property="og:title"
+            content="Melvin Jones Repol - Terminal Theme Portfolio"
+        />
+        <meta property="og:url" content="https://mrepol742.hallofcodes.org" />
+
+        <meta
+            property="og:site_name"
+            content="Melvin Jones Repol - Terminal Theme Portfolio"
+        />
+
+        <meta
+            property="og:description"
+            content="Software Engineer | Full Stack Web Developer | SEO | PWA | Arduino"
+        />
+        <meta property="og:image" content="/terminal.png" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta
+            name="keywords"
+            content="melvin jones repol, melvin jones gallano repol, mrepol742, terminal, web terminal"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Software Engineer | Full Stack Web Developer | SEO | PWA | Arduino"
+        />
+        <meta name="author" content="Melvin Jones Repol" />
+
+        <meta name="twitter:creator" content="@mrepol742" />
+        <meta name="twitter:site" content="@mrepol742" />
+        <meta name="robots" content="noodp, noydir" />
+        <meta name="twitter:domain" content="mrepol742.hallofcodes.org" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="shortcut icon" href="/favicon.png" />
+        <meta property="og:type" content="website" />
+        <meta name="hostname" content="mrepol742.hallofcodes.org" />
+    </head>
+    <body id="main">
+        <header id="header">
+            <h1>Melvin Jones 'Mj' Repol</h1>
+            <p class="color2">
+                Software Engineer | Full Stack Web Developer | SEO | PWA |
+                Arduino
+            </p>
+            <p class="color2">
+                use <span class="command">"help"</span> for command list.
+            </p>
+        </header>
+
+        <div id="terminal">
+            <a id="before"></a>
+        </div>
+
+        <div id="command" onclick="$('texter').focus()">
+            <textarea
+                type="text"
+                id="texter"
+                onkeyup="typeIt(this, event)"
+                onkeydown="
+                    typeIt(this, event);
+                    moveIt(this.value.length, event);
+                "
+                onkeypress="typeIt(this, event)"
+                autofocus
+            ></textarea>
+            <div id="liner">
+                <span id="typer"></span><b class="cursor" id="cursor">█</b>
+            </div>
+        </div>
+
+        <script src="/js/main.js"></script>
+    </body>
 </html>

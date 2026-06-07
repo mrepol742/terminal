@@ -37,7 +37,7 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('fetch', async (event) => {
   if (event.request.method !== "GET") return;
-  if ((event.request.destination === 'image' || event.request.url.includes("/assets/") && event.request.url.includes(atob("aHR0cHM6Ly9tcmVwb2w3NDItdGVybWluYWwubmV0bGlmeS5hcHA")))) {
+  if ((event.request.destination === 'image' || event.request.url.includes("/assets/") && event.request.url.includes(atob("aHR0cHM6Ly93ZWJ2aXVtLm1lbHZpbmpvbmVzcmVwb2wuY29t")))) {
     event.respondWith(caches.open(cacheName).then((cache) => {
       return cache.match(event.request).then((cachedResponse) => {
         return cachedResponse || fetch(event.request.url).then((fetchedResponse) => {
